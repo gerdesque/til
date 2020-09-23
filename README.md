@@ -66,3 +66,21 @@ $1.$2
 #result
 T.N
 ```
+
+## JS
+- To read article of local journalism parse the content and display text
+
+```javascript
+const demandForPayment = document.querySelector('.pdb-article-paidcontent-registration');
+if(demandForPayment) {
+    demandForPayment.remove();
+}
+const article = document.querySelector(".pdb-article script[type='application/ld+json']");
+if(article) {
+    const articleContent = JSON.parse(article.textContent);
+    const scrambledArticleText = document.querySelector(".pdb-article-body");
+    if(scrambledArticleText) {
+        scrambledArticleText.innerText = articleContent.articleBody;
+    }
+}
+```
