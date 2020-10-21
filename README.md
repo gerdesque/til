@@ -84,3 +84,8 @@ if(article) {
     }
 }
 ```
+
+```javascript
+document.getElementById("piano-inline").style.display = "none";
+document.getElementById('article-content-bottom').className = '';
+```
